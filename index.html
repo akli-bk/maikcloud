@@ -7,134 +7,85 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>检测线路</title>
   <link rel="stylesheet" href="./reset.min.css" />
-  <style>
-    body {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(https://source.unsplash.com/random/1920x1080/?scenery);
-      background-color: #000;
-      color: #fff;
-    }
+          <style type="text/css">
+            html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline
+            }
 
-    body:before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-image: linear-gradient(#000, transparent);
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+            body {
+                background: #3498db
+            }
 
-    h1 {
-      margin-bottom: 0.5rem;
-      font-size: 3rem;
-      font-weight: bold;
-      line-height: 1.33333;
-    }
+            #loader-container {
+                width: 188px;
+                height: 188px;
+                color: white;
+                margin: 0 auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%,-50%);
+                border: 5px solid #3498db;
+                border-radius: 50%;
+                -webkit-animation: borderScale 1s infinite ease-in-out;
+                animation: borderScale 1s infinite ease-in-out
+            }
 
-    .text {
-      font-size: 1.5rem;
-      line-height: 1.33333;
-    }
+            #loadingText {
+                font-family: 'Raleway',sans-serif;
+                font-size: 1.4em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%,-50%)
+            }
 
-    .lds-ellipsis {
-      display: inline-block;
-      position: relative;
-      width: 40px;
-      height: 10px;
-    }
+            @-webkit-keyframes borderScale {
+                0% {
+                    border: 5px solid white
+                }
 
-    .lds-ellipsis div {
-      position: absolute;
-      top: 2px;
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: #fff;
-      animation-timing-function: cubic-bezier(0, 1, 1, 0);
-    }
+                50% {
+                    border: 25px solid #3498db
+                }
 
-    .lds-ellipsis div:nth-child(1) {
-      left: 6px;
-      animation: lds-ellipsis1 0.6s infinite;
-    }
+                100% {
+                    border: 5px solid white
+                }
+            }
 
-    .lds-ellipsis div:nth-child(2) {
-      left: 6px;
-      animation: lds-ellipsis2 0.6s infinite;
-    }
+            @keyframes borderScale {
+                0% {
+                    border: 5px solid white
+                }
 
-    .lds-ellipsis div:nth-child(3) {
-      left: 17px;
-      animation: lds-ellipsis2 0.6s infinite;
-    }
+                50% {
+                    border: 25px solid #3498db
+                }
 
-    .lds-ellipsis div:nth-child(4) {
-      left: 28px;
-      animation: lds-ellipsis3 0.6s infinite;
-    }
-
-    @keyframes lds-ellipsis1 {
-      0% {
-        transform: scale(0);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    @keyframes lds-ellipsis2 {
-      0% {
-        transform: translate(0, 0);
-      }
-
-      100% {
-        transform: translate(10px, 0);
-      }
-    }
-
-    @keyframes lds-ellipsis3 {
-      0% {
-        transform: scale(1);
-      }
-
-      100% {
-        transform: scale(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      html {
-        font-size: 12px;
-      }
-    }
-  </style>
+                100% {
+                    border: 5px solid white
+                }
+            }
+        </style>
 </head>
 
 <body>
   <div>
-    <h1>线路检测页</h1>
-    <div class="text" id="info">
-      线路测试中
-      <div class="lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      将自动跳转可用域名<br />请耐心等候
-    </div>
-  </div>
+<div id="loader-container">
+            <center>
+                <p id="loadingText">
+                    收藏此页防失联<br/>引导中 请稍后
+                </p>
+            </center>
+        </div>
   <script defer src="https://us.umami.is/script.js" data-website-id="bc86aa98-648e-42dc-b984-0972f341eb38"></script>
   <script>
     // 获取当前页面的 URL
