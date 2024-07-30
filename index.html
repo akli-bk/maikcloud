@@ -1,105 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="5;url='https://maikcloud.net';">
-  <title>MaikCloud 引导页</title>
-  <script defer src="https://umami.aklibk.com/random-string.js" data-website-id="ddbc06c7-e0d4-48cc-b259-57b9223c1993"></script>
-  <link rel="stylesheet" href="./reset.min.css" />
-          <style type="text/css">
-            html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-                margin: 0;
-                padding: 0;
-                border: 0;
-                font-size: 100%;
-                font: inherit;
-                vertical-align: baseline
-            }
-
-            body {
-                background: #3498db
-            }
-
-            #loader-container {
-                width: 188px;
-                height: 188px;
-                color: white;
-                margin: 0 auto;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-right: -50%;
-                transform: translate(-50%,-50%);
-                border: 5px solid #3498db;
-                border-radius: 50%;
-                -webkit-animation: borderScale 1s infinite ease-in-out;
-                animation: borderScale 1s infinite ease-in-out
-            }
-
-            #loadingText {
-                font-family: 'Raleway',sans-serif;
-                font-size: 1.4em;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-right: -50%;
-                transform: translate(-50%,-50%)
-            }
-
-            @-webkit-keyframes borderScale {
-                0% {
-                    border: 5px solid white
-                }
-
-                50% {
-                    border: 25px solid #3498db
-                }
-
-                100% {
-                    border: 5px solid white
-                }
-            }
-
-            @keyframes borderScale {
-                0% {
-                    border: 5px solid white
-                }
-
-                50% {
-                    border: 25px solid #3498db
-                }
-
-                100% {
-                    border: 5px solid white
-                }
-            }
-        </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5;url='https://www.unboundly.net'">
+  <title>无界引导页面</title>
+  <link rel="stylesheet" href="./reset.min.css">
+  <style>
+    body {
+      background: #3498db;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Raleway', sans-serif;
+      color: white;
+    }
+    #loader-container {
+      width: 188px;
+      height: 188px;
+      border: 5px solid #3498db;
+      border-radius: 50%;
+      animation: borderScale 1s infinite ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #loadingText {
+      font-size: 1.4em;
+      text-align: center;
+    }
+    @keyframes borderScale {
+      0%, 100% { border-color: white; }
+      50% { border-color: #3498db; }
+    }
+  </style>
 </head>
-
 <body>
-  <div>
-<div id="loader-container">
-            <center>
-                <p id="loadingText">
-                    收藏此页防失联<br/>引导中 请稍后
-                </p>
-            </center>
-        </div>
-
-  <script type="text/javascript">
-    window.$crisp = [];
-    window.CRISP_WEBSITE_ID = "7d9e563f-d378-462f-9242-3729a018eb34"; // 填写 Crisp ID
-    (function () {
-      d = document;
-      s = d.createElement("script");
-      s.src = "https://client.crisp.chat/l.js";
-      s.async = 1;
-      d.getElementsByTagName("head")[0].appendChild(s);
-    })();
-  </script>
-
+  <div id="loader-container">
+    <p id="loadingText">收藏此页防失联<br>引导中 请稍后</p>
+  </div>
 </body>
-
 </html>
